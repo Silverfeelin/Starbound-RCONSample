@@ -73,15 +73,14 @@
             this.Tabs.Location = new System.Drawing.Point(0, 64);
             this.Tabs.MouseState = MaterialSkin.MouseState.HOVER;
             this.Tabs.Name = "Tabs";
-            this.Tabs.Size = new System.Drawing.Size(683, 40);
+            this.Tabs.Size = new System.Drawing.Size(1068, 40);
             this.Tabs.TabIndex = 1;
             this.Tabs.TabStop = false;
-            this.Tabs.Text = "materialTabSelector1";
+            this.Tabs.Text = "dd";
             // 
             // TabControl
             // 
-            this.TabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.TabControl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TabControl.Controls.Add(this.RconTab);
             this.TabControl.Controls.Add(this.SettingsTab);
@@ -90,7 +89,7 @@
             this.TabControl.MouseState = MaterialSkin.MouseState.HOVER;
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(683, 152);
+            this.TabControl.Size = new System.Drawing.Size(673, 152);
             this.TabControl.TabIndex = 2;
             this.TabControl.TabStop = false;
             this.TabControl.SelectedIndexChanged += new System.EventHandler(this.TabControl_SelectedIndexChanged);
@@ -104,7 +103,7 @@
             this.RconTab.Location = new System.Drawing.Point(4, 22);
             this.RconTab.Name = "RconTab";
             this.RconTab.Padding = new System.Windows.Forms.Padding(3);
-            this.RconTab.Size = new System.Drawing.Size(675, 126);
+            this.RconTab.Size = new System.Drawing.Size(665, 126);
             this.RconTab.TabIndex = 0;
             this.RconTab.Text = "RCON";
             // 
@@ -140,11 +139,11 @@
             // SettingsTab
             // 
             this.SettingsTab.BackColor = System.Drawing.Color.White;
+            this.SettingsTab.Controls.Add(this.TbxServerPassword);
             this.SettingsTab.Controls.Add(this.ChkShowPassword);
             this.SettingsTab.Controls.Add(this.LbLMessageFormat);
             this.SettingsTab.Controls.Add(this.TbxMessageFormat);
             this.SettingsTab.Controls.Add(this.LbLServerPassword);
-            this.SettingsTab.Controls.Add(this.TbxServerPassword);
             this.SettingsTab.Controls.Add(this.LblServerPort);
             this.SettingsTab.Controls.Add(this.TbxServerPort);
             this.SettingsTab.Controls.Add(this.LblServerAddress);
@@ -152,16 +151,17 @@
             this.SettingsTab.Location = new System.Drawing.Point(4, 22);
             this.SettingsTab.Name = "SettingsTab";
             this.SettingsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.SettingsTab.Size = new System.Drawing.Size(675, 126);
+            this.SettingsTab.Size = new System.Drawing.Size(665, 126);
             this.SettingsTab.TabIndex = 1;
             this.SettingsTab.Text = "Settings";
             // 
             // ChkShowPassword
             // 
+            this.ChkShowPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ChkShowPassword.AutoSize = true;
             this.ChkShowPassword.Depth = 0;
             this.ChkShowPassword.Font = new System.Drawing.Font("Roboto", 10F);
-            this.ChkShowPassword.Location = new System.Drawing.Point(544, 58);
+            this.ChkShowPassword.Location = new System.Drawing.Point(531, 58);
             this.ChkShowPassword.Margin = new System.Windows.Forms.Padding(0);
             this.ChkShowPassword.MouseLocation = new System.Drawing.Point(-1, -1);
             this.ChkShowPassword.MouseState = MaterialSkin.MouseState.HOVER;
@@ -188,6 +188,8 @@
             // 
             // TbxMessageFormat
             // 
+            this.TbxMessageFormat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TbxMessageFormat.Depth = 0;
             this.TbxMessageFormat.Hint = "{message}";
             this.TbxMessageFormat.Location = new System.Drawing.Point(183, 89);
@@ -197,7 +199,7 @@
             this.TbxMessageFormat.SelectedText = "";
             this.TbxMessageFormat.SelectionLength = 0;
             this.TbxMessageFormat.SelectionStart = 0;
-            this.TbxMessageFormat.Size = new System.Drawing.Size(484, 23);
+            this.TbxMessageFormat.Size = new System.Drawing.Size(476, 23);
             this.TbxMessageFormat.TabIndex = 3;
             this.TbxMessageFormat.UseSystemPasswordChar = false;
             this.TbxMessageFormat.TextChanged += new System.EventHandler(this.SettingTextChanged);
@@ -217,16 +219,19 @@
             // 
             // TbxServerPassword
             // 
+            this.TbxServerPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TbxServerPassword.Depth = 0;
             this.TbxServerPassword.Hint = "securePassword";
             this.TbxServerPassword.Location = new System.Drawing.Point(183, 60);
+            this.TbxServerPassword.MinimumSize = new System.Drawing.Size(64, 0);
             this.TbxServerPassword.MouseState = MaterialSkin.MouseState.HOVER;
             this.TbxServerPassword.Name = "TbxServerPassword";
             this.TbxServerPassword.PasswordChar = '•';
             this.TbxServerPassword.SelectedText = "";
             this.TbxServerPassword.SelectionLength = 0;
             this.TbxServerPassword.SelectionStart = 0;
-            this.TbxServerPassword.Size = new System.Drawing.Size(358, 23);
+            this.TbxServerPassword.Size = new System.Drawing.Size(345, 23);
             this.TbxServerPassword.TabIndex = 2;
             this.TbxServerPassword.UseSystemPasswordChar = false;
             this.TbxServerPassword.TextChanged += new System.EventHandler(this.SettingTextChanged);
@@ -246,6 +251,8 @@
             // 
             // TbxServerPort
             // 
+            this.TbxServerPort.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TbxServerPort.Depth = 0;
             this.TbxServerPort.Hint = "21026";
             this.TbxServerPort.Location = new System.Drawing.Point(183, 32);
@@ -255,7 +262,7 @@
             this.TbxServerPort.SelectedText = "";
             this.TbxServerPort.SelectionLength = 0;
             this.TbxServerPort.SelectionStart = 0;
-            this.TbxServerPort.Size = new System.Drawing.Size(486, 23);
+            this.TbxServerPort.Size = new System.Drawing.Size(476, 23);
             this.TbxServerPort.TabIndex = 1;
             this.TbxServerPort.Text = "21026";
             this.TbxServerPort.UseSystemPasswordChar = false;
@@ -276,6 +283,8 @@
             // 
             // TbxServerAddress
             // 
+            this.TbxServerAddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TbxServerAddress.Depth = 0;
             this.TbxServerAddress.Hint = "127.0.0.1";
             this.TbxServerAddress.Location = new System.Drawing.Point(183, 3);
@@ -285,7 +294,7 @@
             this.TbxServerAddress.SelectedText = "";
             this.TbxServerAddress.SelectionLength = 0;
             this.TbxServerAddress.SelectionStart = 0;
-            this.TbxServerAddress.Size = new System.Drawing.Size(486, 23);
+            this.TbxServerAddress.Size = new System.Drawing.Size(476, 23);
             this.TbxServerAddress.TabIndex = 0;
             this.TbxServerAddress.Text = "127.0.0.1";
             this.TbxServerAddress.UseSystemPasswordChar = false;
@@ -293,11 +302,14 @@
             // 
             // RtbxOutput
             // 
+            this.RtbxOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.RtbxOutput.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RtbxOutput.Location = new System.Drawing.Point(12, 239);
             this.RtbxOutput.Name = "RtbxOutput";
             this.RtbxOutput.ReadOnly = true;
-            this.RtbxOutput.Size = new System.Drawing.Size(659, 281);
+            this.RtbxOutput.Size = new System.Drawing.Size(661, 229);
             this.RtbxOutput.TabIndex = 4;
             this.RtbxOutput.Text = "";
             // 
@@ -305,10 +317,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(683, 532);
+            this.ClientSize = new System.Drawing.Size(685, 480);
             this.Controls.Add(this.RtbxOutput);
             this.Controls.Add(this.TabControl);
             this.Controls.Add(this.Tabs);
+            this.MinimumSize = new System.Drawing.Size(320, 320);
             this.Name = "MainForm";
             this.Text = "Starbound RCON Client";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
