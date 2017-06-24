@@ -1,0 +1,10 @@
+{
+  "name" : "StarboundRcon",
+  "friendlyName" : "Starbound RCON",
+  "priority" : 0,
+  "version" : "0.1",
+  "author" : "Silverfeelin",
+  "description" : "RCON server mod with some samples. Please refer to the StarboundRCON documentation.",
+  "requires" : [],
+  "includes" : []
+}
