@@ -257,12 +257,20 @@ namespace StarboundRcon
         }
 
         /// <summary>
-        /// Sends the entered RCON command, after verifying the command and settings.
+        /// Button click event that sends the RCON command.
         /// </summary>
         private void SendCommand_Click(object sender, EventArgs e)
         {
-            // Get command
             string command = GetCommand();
+            SendCommand(command);
+        }
+
+        /// <summary>
+        /// Asynchronously sends the RCON command and logs the response.
+        /// </summary>
+        /// <param name="command">Command to send.</param>
+        private async void SendCommand(string command)
+        {
             if (string.IsNullOrEmpty(command))
             {
                 Log("Please enter an RCON command.");
@@ -277,15 +285,6 @@ namespace StarboundRcon
                 return;
             }
 
-            SendCommand(command);
-        }
-
-        /// <summary>
-        /// Asynchronously sends the RCON command and logs the response.
-        /// </summary>
-        /// <param name="command">Command to send.</param>
-        private async void SendCommand(string command)
-        {
             string result;
             try
             {
@@ -305,7 +304,8 @@ namespace StarboundRcon
         /// <param name="args">Optional message format arguments.</param>
         public void Log(string message, params string[] args)
         {
-            if (string.IsNullOrEmpty(message)) return;
+            if (string.IsNullOrEmpty(message))
+                message = "Empty message received.";
 
             // Format
             if (args != null && args.Length > 0)
@@ -325,6 +325,16 @@ namespace StarboundRcon
         private void ShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             TbxServerPassword.PasswordChar = ChkShowPassword.Checked ? '\0' : '•';
+        }
+
+        private void Command_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                string command = GetCommand();
+                SendCommand(command);
+                e.Handled = true;
+            }
         }
     }
 }

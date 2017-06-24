@@ -33,6 +33,8 @@ Please note that the mod is specifically made for RCON commands, and will have t
 
 The client application is a Windows Forms application used to send RCON commands to the server. It is just a simple application used to test if RCON is configured and working correctly, so don't be surprised if there's any issues with the application.
 
+![](https://raw.githubusercontent.com/Silverfeelin/Starbound-RCONSample/master/StarboundRCON-App/overview.png)
+
 ## Installation
 
 1. Copy the `StarboundRCON-App` folder anywhere you want.
@@ -54,6 +56,8 @@ Changed settings are saved automatically when changing back to the `RCON` tab or
 | RCON Server Port | The RCON listener port. |
 | RCON Server Password | The RCON server password. |
 | Message Format | The format of sent RCON messages.<br/>The identifier `{message}` will be replaced with the entered command. |
+
+![](https://raw.githubusercontent.com/Silverfeelin/Starbound-RCONSample/master/StarboundRCON-App/overview-settings.png)
 
 ---
 

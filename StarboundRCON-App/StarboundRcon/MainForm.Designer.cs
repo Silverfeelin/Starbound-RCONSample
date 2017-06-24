@@ -35,6 +35,7 @@
             this.LblCommand = new MaterialSkin.Controls.MaterialLabel();
             this.TbxCommand = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.SettingsTab = new System.Windows.Forms.TabPage();
+            this.ChkShowPassword = new MaterialSkin.Controls.MaterialCheckBox();
             this.LbLMessageFormat = new MaterialSkin.Controls.MaterialLabel();
             this.TbxMessageFormat = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.LbLServerPassword = new MaterialSkin.Controls.MaterialLabel();
@@ -44,7 +45,6 @@
             this.LblServerAddress = new MaterialSkin.Controls.MaterialLabel();
             this.TbxServerAddress = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.RtbxOutput = new System.Windows.Forms.RichTextBox();
-            this.ChkShowPassword = new MaterialSkin.Controls.MaterialCheckBox();
             this.TabControl.SuspendLayout();
             this.RconTab.SuspendLayout();
             this.SettingsTab.SuspendLayout();
@@ -112,6 +112,7 @@
             // 
             this.LblCommand.AutoSize = true;
             this.LblCommand.Depth = 0;
+            this.LblCommand.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblCommand.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.LblCommand.Location = new System.Drawing.Point(6, 3);
             this.LblCommand.MouseState = MaterialSkin.MouseState.HOVER;
@@ -134,6 +135,7 @@
             this.TbxCommand.Size = new System.Drawing.Size(657, 23);
             this.TbxCommand.TabIndex = 0;
             this.TbxCommand.UseSystemPasswordChar = false;
+            this.TbxCommand.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Command_KeyDown);
             // 
             // SettingsTab
             // 
@@ -154,10 +156,28 @@
             this.SettingsTab.TabIndex = 1;
             this.SettingsTab.Text = "Settings";
             // 
+            // ChkShowPassword
+            // 
+            this.ChkShowPassword.AutoSize = true;
+            this.ChkShowPassword.Depth = 0;
+            this.ChkShowPassword.Font = new System.Drawing.Font("Roboto", 10F);
+            this.ChkShowPassword.Location = new System.Drawing.Point(544, 58);
+            this.ChkShowPassword.Margin = new System.Windows.Forms.Padding(0);
+            this.ChkShowPassword.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.ChkShowPassword.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ChkShowPassword.Name = "ChkShowPassword";
+            this.ChkShowPassword.Ripple = true;
+            this.ChkShowPassword.Size = new System.Drawing.Size(128, 30);
+            this.ChkShowPassword.TabIndex = 8;
+            this.ChkShowPassword.Text = "Show Password";
+            this.ChkShowPassword.UseVisualStyleBackColor = true;
+            this.ChkShowPassword.CheckedChanged += new System.EventHandler(this.ShowPassword_CheckedChanged);
+            // 
             // LbLMessageFormat
             // 
             this.LbLMessageFormat.AutoSize = true;
             this.LbLMessageFormat.Depth = 0;
+            this.LbLMessageFormat.Font = new System.Drawing.Font("Roboto", 11F);
             this.LbLMessageFormat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.LbLMessageFormat.Location = new System.Drawing.Point(51, 89);
             this.LbLMessageFormat.MouseState = MaterialSkin.MouseState.HOVER;
@@ -186,6 +206,7 @@
             // 
             this.LbLServerPassword.AutoSize = true;
             this.LbLServerPassword.Depth = 0;
+            this.LbLServerPassword.Font = new System.Drawing.Font("Roboto", 11F);
             this.LbLServerPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.LbLServerPassword.Location = new System.Drawing.Point(8, 61);
             this.LbLServerPassword.MouseState = MaterialSkin.MouseState.HOVER;
@@ -214,6 +235,7 @@
             // 
             this.LblServerPort.AutoSize = true;
             this.LblServerPort.Depth = 0;
+            this.LblServerPort.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblServerPort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.LblServerPort.Location = new System.Drawing.Point(46, 32);
             this.LblServerPort.MouseState = MaterialSkin.MouseState.HOVER;
@@ -243,6 +265,7 @@
             // 
             this.LblServerAddress.AutoSize = true;
             this.LblServerAddress.Depth = 0;
+            this.LblServerAddress.Font = new System.Drawing.Font("Roboto", 11F);
             this.LblServerAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.LblServerAddress.Location = new System.Drawing.Point(63, 3);
             this.LblServerAddress.MouseState = MaterialSkin.MouseState.HOVER;
@@ -277,23 +300,6 @@
             this.RtbxOutput.Size = new System.Drawing.Size(659, 281);
             this.RtbxOutput.TabIndex = 4;
             this.RtbxOutput.Text = "";
-            // 
-            // ChkShowPassword
-            // 
-            this.ChkShowPassword.AutoSize = true;
-            this.ChkShowPassword.Depth = 0;
-            this.ChkShowPassword.Font = new System.Drawing.Font("Roboto", 10F);
-            this.ChkShowPassword.Location = new System.Drawing.Point(544, 58);
-            this.ChkShowPassword.Margin = new System.Windows.Forms.Padding(0);
-            this.ChkShowPassword.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.ChkShowPassword.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ChkShowPassword.Name = "ChkShowPassword";
-            this.ChkShowPassword.Ripple = true;
-            this.ChkShowPassword.Size = new System.Drawing.Size(128, 30);
-            this.ChkShowPassword.TabIndex = 8;
-            this.ChkShowPassword.Text = "Show Password";
-            this.ChkShowPassword.UseVisualStyleBackColor = true;
-            this.ChkShowPassword.CheckedChanged += new System.EventHandler(this.ShowPassword_CheckedChanged);
             // 
             // MainForm
             // 
